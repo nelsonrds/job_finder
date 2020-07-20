@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Jobs Search - {{data.title}}</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="display-4">{{data.title}} - <small>{{data.type}}</small></h1>
+    <hr>
+    <h4><b>Company: </b>{{data.company}} <a href="{{data.company_url}}" class="badge badge-secondary">Webpage</a></h4>
+    <h4><b>Location: </b>{{data.location}}</h4>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <p>{{data.description|safe}}</p>
+        </div>
+    </div>
+    <p>{{data.how_to_apply|safe}}</p>
+    <a href="/" class="btn btn-secondary active" role="button" aria-pressed="true">Back</a>
+</div>
+<br>
+
+</body>
+</html>
