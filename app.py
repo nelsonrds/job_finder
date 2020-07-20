@@ -60,7 +60,7 @@ def index():
     else:
         data = ''
 
-    return render_template('index.html', data=data[:10])
+    return render_template('index.html', data=data[:50])
 
 
 @app.route('/details/<string:id>')
