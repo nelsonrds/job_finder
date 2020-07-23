@@ -60,7 +60,12 @@ def index():
     else:
         data = ''
 
-    return render_template('index.html', data=data[:50])
+    context = {
+        'data': data,
+        'num_results': len(data),
+    }
+
+    return render_template('index.html', context=context)
 
 
 @app.route('/details/<string:id>')

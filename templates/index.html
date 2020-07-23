@@ -14,9 +14,11 @@
       </form>
     </nav>
     <br>
-    {% if data %}
+    <p>{%if context.num_results:%}Number of results: {{ context.num_results }}{%endif%}</p>
+    <br>
+    {% if context.data %}
         <div class="row row-cols-1 row-cols-md-3">
-        {%for item in data%}
+        {%for item in context.data%}
             <div class="col mb-5">
                 <div class="card">
                     <div class="card-body">
